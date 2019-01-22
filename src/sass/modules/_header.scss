@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search{
+        background-color: #f2f2f2;
+        border: 0;
+        border-radius: 10px;
+        height: 42px;
+        width: 420px;
+        padding: 0 14px;
+        color: #b9b9b9;
+        outline: none;
+        box-shadow: -1px 1px 3px #dedede;
+    }
+    .user{
+        padding-left: 30px;
+        position: relative;
+        &__name{
+            padding-left: 15px;
+        }
+        &:before{
+            content: '';
+            position: absolute;
+        }
+    }
+}

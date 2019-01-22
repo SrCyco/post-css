@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px; }
+
+figure {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+p {
+  margin: 0; }
+
+.user {
+  display: flex;
+  align-items: center; }
+  .user__wrapper-img {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background-color: #d480a4; }
+  .user__img {
+    width: 100%;
+    height: 100%; }
+  .user__name {
+    padding-left: 12px; }
+
+.container {
+  min-width: 1247px;
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'aside header' 'aside videos';
+  grid-column-gap: 15px;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: 100px 1fr; }
+  .container .aside {
+    grid-area: aside; }
+
+.aside {
+  background-color: #151b31;
+  padding: 50px 20px; }
+  .aside .logo {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 32px; }
+    .aside .logo span {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ea1d22+0,d480a4+100 */
+      background: #ea1d22;
+      /* Old browsers */
+      background: -moz-linear-gradient(left, #ea1d22 0%, #d480a4 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #ea1d22 0%, #d480a4 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #ea1d22 0%, #d480a4 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea1d22', endColorstr='#d480a4',GradientType=1 );
+      /* IE6-9 */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .aside .playlist--ordered, .aside .playlist--unordered {
+    color: #ffffff;
+    border: 1px solid transparent; }
+  .aside .playlist--ordered__title, .aside .playlist--unordered__title {
+    font-size: 16px; }
+  .aside .playlist--ordered .playlist__list {
+    counter-reset: ordered; }
+  .aside .playlist--ordered .playlist__item {
+    counter-increment: ordered;
+    position: relative;
+    padding-left: 30px;
+    font-size: 15px;
+    margin: 1em 0; }
+    .aside .playlist--ordered .playlist__item:before {
+      position: absolute;
+      content: counter(ordered);
+      color: #ffffff;
+      left: 0; }
+  .aside .playlist--unordered .playlist__item {
+    margin: 22px 0; }
+    .aside .playlist--unordered .playlist__item:last-child {
+      margin-bottom: 0; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .search {
+    background-color: #f2f2f2;
+    border: 0;
+    border-radius: 10px;
+    height: 42px;
+    width: 420px;
+    padding: 0 14px;
+    color: #b9b9b9;
+    outline: none;
+    box-shadow: -1px 1px 3px #dedede; }
+  .header .user {
+    padding-left: 30px;
+    position: relative; }
+    .header .user__name {
+      padding-left: 15px; }
+    .header .user:before {
+      content: '';
+      position: absolute; }

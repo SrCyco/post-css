@@ -1,0 +1,21 @@
+.container{
+    min-width: 1247px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+        'aside header'
+        'aside videos';
+    grid-column-gap: 15px;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 100px 1fr;
+    
+    %aside{
+        grid-area: aside;
+    }
+    %header{
+        grid-area: header;
+    }
+    %videos{
+        grid-area: videos;
+    }
+}

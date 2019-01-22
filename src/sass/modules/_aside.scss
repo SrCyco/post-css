@@ -1,0 +1,62 @@
+.aside{
+    @extend %aside;
+    background-color: #151b31;
+    padding: 50px 20px;
+    .logo{
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 32px;
+        span{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ea1d22+0,d480a4+100 */
+            background: #ea1d22; /* Old browsers */
+            background: -moz-linear-gradient(left, #ea1d22 0%, #d480a4 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, #ea1d22 0%,#d480a4 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, #ea1d22 0%,#d480a4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea1d22', endColorstr='#d480a4',GradientType=1 ); /* IE6-9 */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    %playlist{
+        color: #ffffff;
+        border: 1px solid transparent;
+    }
+    .playlist{
+        &--ordered, &--unordered{
+            @extend %playlist;
+            &__title{
+                font-size: 16px;
+            }
+        }
+        &--ordered{
+            .playlist{
+                &__list{
+                    counter-reset: ordered;
+                }
+                &__item{
+                    counter-increment: ordered;
+                    position: relative;
+                    padding-left: 30px;
+                    font-size: 15px;
+                    margin: 1em 0;
+                    &:before{
+                        position: absolute;
+                        content: counter(ordered);
+                        color: #ffffff;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        &--unordered{
+            .playlist{
+                &__item{
+                    margin: 22px 0;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
